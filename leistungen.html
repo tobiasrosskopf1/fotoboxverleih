@@ -617,5 +617,51 @@
         </div>
     </div>
 </footer>
+  <!-- JAVASCRIPT FÜR SWIPER INITIALISIERUNG & LIGHTBOX -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        
+        // 1. Swiper Instanzen initialisieren (hier vervollständigt)
+        document.querySelectorAll('.mySwiper').forEach(function(swiperEl) {
+            new Swiper(swiperEl, {
+                loop: true,
+                spaceBetween: 10,
+                pagination: {
+                    el: swiperEl.querySelector('.swiper-pagination'),
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: swiperEl.querySelector('.swiper-button-next'),
+                    prevEl: swiperEl.querySelector('.swiper-button-prev'),
+                },
+            });
+        });
+
+        // 2. LOGIK FÜR DAS MOBILE NAVIGATIONS-MENÜ
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', function() {
+                // Schaltet das Menü zwischen sichtbar (flex) und unsichtbar (hidden) um
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('flex');
+            });
+        }
+
+        // Menü schließen, wenn ein Link geklickt wird
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            });
+        });
+
+        // --- Hier kommt später dein Code für das Lightbox-Modal hin, falls du das noch einbaust ---
+
+    });
+</script>
 </body>
 </html>
