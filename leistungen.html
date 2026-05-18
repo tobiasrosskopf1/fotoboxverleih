@@ -1,105 +1,37 @@
 <!DOCTYPE html>
 <html class="light" lang="de">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Paparossi Fotobox - Fotoboxverleih Roßkopf</title>
+<header class="fixed top-0 w-full z-[100] bg-background border-b border-outline-variant/30 shadow-sm">
+    <div class="flex justify-between items-center px-6 h-20 max-w-screen-2xl mx-auto relative z-[120]">
+        <a class="flex items-center gap-3" href="index.html">
+            <img src="Logo.png" alt="Logo" class="h-10 w-auto object-contain">
+            <span class="font-headline font-bold text-sm md:text-lg tracking-tight text-primary uppercase">Fotoboxverleih Roßkopf</span>
+        </a>
 
-    <style>
-        /* --- INTER LOKAL --- */
-        @font-face {
-            font-family: 'Inter';
-            src: url('inter-v20-latin-300.woff2') format('woff2');
-            font-weight: 300; font-style: normal; font-display: swap;
-        }
-        @font-face {
-            font-family: 'Inter';
-            src: url('inter-v20-latin-regular.woff2') format('woff2');
-            font-weight: 400; font-style: normal; font-display: swap;
-        }
-        @font-face {
-            font-family: 'Inter';
-            src: url('inter-v20-latin-500.woff2') format('woff2');
-            font-weight: 500; font-style: normal; font-display: swap;
-        }
-        @font-face {
-            font-family: 'Inter';
-            src: url('inter-v20-latin-600.woff2') format('woff2');
-            font-weight: 600; font-style: normal; font-display: swap;
-        }
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-10 font-headline font-semibold text-xs uppercase tracking-[0.2em]">
+            <a class="text-secondary/70 hover:text-primary transition-colors" href="index.html">Startseite</a>
+            <a class="text-primary border-b-2 border-primary pb-1" href="leistungen.html">Leistungen</a>
+            <a class="text-secondary/70 hover:text-primary transition-colors" href="kontakt.html">Kontakt</a>
+        </nav>
 
-        /* --- PLUS JAKARTA SANS LOKAL --- */
-        @font-face {
-            font-family: 'Plus Jakarta Sans';
-            src: url('plus-jakarta-sans-v12-latin-regular.woff2') format('woff2');
-            font-weight: 400; font-style: normal; font-display: swap;
-        }
-        @font-face {
-            font-family: 'Plus Jakarta Sans';
-            src: url('plus-jakarta-sans-v12-latin-500.woff2') format('woff2');
-            font-weight: 500; font-style: normal; font-display: swap;
-        }
-        @font-face {
-            font-family: 'Plus Jakarta Sans';
-            src: url('plus-jakarta-sans-v12-latin-600.woff2') format('woff2');
-            font-weight: 600; font-style: normal; font-display: swap;
-        }
-        @font-face {
-            font-family: 'Plus Jakarta Sans';
-            src: url('plus-jakarta-sans-v12-latin-700.woff2') format('woff2');
-            font-weight: 700; font-style: normal; font-display: swap;
-        }
-        @font-face {
-            font-family: 'Plus Jakarta Sans';
-            src: url('plus-jakarta-sans-v12-latin-800.woff2') format('woff2');
-            font-weight: 800; font-style: normal; font-display: swap;
-        }
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-primary relative z-[130]" aria-label="Menü öffnen/schließen">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 transition-transform duration-300">
+                <!-- Startzustand: Hamburger Icon -->
+                <path id="menu-icon-path" stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </button>
+    </div>
 
-        .glass-nav {
-            background: rgba(28, 28, 24, 0.85);
-            backdrop-filter: blur(20px);
-        }
-        .text-shadow-premium {
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-        }
-    </style>
-
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-          tailwind.config = {
-            darkMode: "class",
-            theme: {
-              extend: {
-                colors: {
-                  "primary": "#5c4304",
-                  "primary-container": "#765a1c",
-                  "on-primary": "#ffffff",
-                  "secondary": "#765a1c",
-                  "secondary-fixed": "#ffdea3",
-                  "secondary-fixed-dim": "#e7c179",
-                  "background": "#fcf9f3",
-                  "on-background": "#1c1c18",
-                  "surface": "#fcf9f3",
-                  "on-surface": "#1c1c18",
-                  "on-surface-variant": "#4d4639",
-                  "surface-container": "#f0eee8",
-                  "surface-container-low": "#f6f3ed",
-                  "surface-container-highest": "#e5e2dc",
-                  "surface-container-lowest": "#ffffff",
-                  "outline-variant": "#d1c5b4",
-                  "primary-fixed-dim": "#e7c179"
-                },
-                fontFamily: {
-                  "headline": ["Plus Jakarta Sans", "sans-serif"],
-                  "body": ["Inter", "sans-serif"],
-                  "label": ["Inter", "sans-serif"]
-                },
-                borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
-              },
-            },
-          }
-    </script>
-</head>
+    <!-- Mobile Navigation Overlay (flex hinzugefügt, standardmäßig hidden) -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-background z-[110] flex-col items-center justify-center">
+        <nav class="flex flex-col items-center gap-10 font-headline font-bold text-2xl uppercase tracking-widest text-primary">
+            <a href="index.html" class="hover:text-secondary">Startseite</a>
+            <a href="leistungen.html" class="text-secondary border-b-4 border-secondary">Leistungen</a>
+            <a href="kontakt.html" class="hover:text-secondary">Kontakt</a>
+        </nav>
+    </div>
+</header>
 <body class="bg-background text-on-surface font-body antialiased overflow-x-hidden">
 
     <header class="fixed top-0 w-full z-[100] bg-background border-b border-outline-variant/30 shadow-sm">
@@ -617,5 +549,47 @@
         </div>
     </div>
 </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIconPath = document.getElementById('menu-icon-path');
+
+        // SVG-Pfade für den Wechsel zwischen Hamburger und X
+        const hamburgerPath = "M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5";
+        const closePath = "M6 18L18 6M6 6l12 12";
+
+        menuBtn.addEventListener('click', () => {
+            // Prüfen, ob das Menü aktuell ausgeblendet ist
+            const isHidden = mobileMenu.classList.contains('hidden');
+
+            if (isHidden) {
+                // Menü öffnen
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex');
+                menuIconPath.setAttribute('d', closePath);
+                // Verhindert das Scrollen des Hintergrunds bei offenem Menü
+                document.body.classList.add('overflow-hidden');
+            } else {
+                // Menü schließen
+                mobileMenu.classList.remove('flex');
+                mobileMenu.classList.add('hidden');
+                menuIconPath.setAttribute('d', hamburgerPath);
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+
+        // Schließen des Menüs, sobald ein Link geklickt wird
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('flex');
+                mobileMenu.classList.add('hidden');
+                menuIconPath.setAttribute('d', hamburgerPath);
+                document.body.classList.remove('overflow-hidden');
+            });
+        });
+    });
+</script>
 </body>
 </html>
