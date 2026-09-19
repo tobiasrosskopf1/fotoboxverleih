@@ -4,10 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fotobox mieten in Eichstätt, Beilngries & Greding</title>
-<meta name="description" content="Fotobox für deine Feier mieten: Auf- und Abbau sowie persönlicher Support inklusive. Sofortdruck je nach Paket – in Eichstätt, Beilngries und Greding.">
+<meta name="description" content="Fotobox ab 179 € mieten: Digitalpaket mit Auf- und Abbau sowie persönlichem Support. Für Eichstätt, Beilngries, Greding und Umgebung.">
 <link rel="canonical" href="https://www.fotoboxverleih-rosskopf.de/">
 <link rel="icon" href="https://www.fotoboxverleih-rosskopf.de/favicon.ico">
 <link rel="icon" type="image/png" sizes="48x48" href="https://www.fotoboxverleih-rosskopf.de/favicon-48.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://www.fotoboxverleih-rosskopf.de/favicon-512.png">
 <link rel="apple-touch-icon" sizes="512x512" href="https://www.fotoboxverleih-rosskopf.de/favicon-512.png">
 
 <meta property="og:type" content="website">
@@ -144,6 +145,15 @@ p{margin:0 0 18px}
 .accessory-body p{font-size:.82rem;color:var(--muted);margin-bottom:14px}
 .accessory-link{margin-top:auto;color:var(--gold);font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
 .accessory-link:hover{text-decoration:underline}
+.eventmodule-teaser{display:grid;grid-template-columns:1fr 1.3fr;gap:34px;align-items:center;margin-top:28px;padding:22px;border-radius:20px;background:linear-gradient(135deg,#f4ecdf,#ebe0ce);border:1px solid rgba(209,197,180,.5)}
+.eventmodule-visuals{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:stretch}
+.eventmodule-visual{display:flex;flex-direction:column;justify-content:center;min-width:0;padding:10px;border-radius:15px;background:rgba(255,255,255,.52)}
+.eventmodule-visual img{width:100%;height:150px;object-fit:contain;aspect-ratio:auto;border-radius:10px}
+.eventmodule-visual span{display:block;margin-top:6px;text-align:center;color:var(--muted);font-size:.64rem;font-weight:700}
+.eventmodule-teaser h3{font-size:clamp(1.45rem,3vw,2.15rem);margin:9px 0 10px}
+.eventmodule-teaser p{color:var(--muted);font-size:.88rem}
+.eventmodule-status{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 17px}
+.eventmodule-status span{padding:6px 10px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--gold);font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
 .accessory-note{margin-top:30px;padding:22px 25px;border-radius:16px;background:var(--surface2);border:1px solid rgba(209,197,180,.35);text-align:center}
 .accessory-note p{margin:0;color:var(--muted);font-size:.88rem}
 
@@ -165,6 +175,11 @@ p{margin:0 0 18px}
 
 .region{background:var(--surface2);border-top:1px solid rgba(209,197,180,.25);border-bottom:1px solid rgba(209,197,180,.25);text-align:center}
 .region p{max-width:760px;margin:0 auto;color:var(--muted)}
+.service-areas{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:28px auto 0;max-width:820px}
+.service-area{display:inline-flex;align-items:center;justify-content:center;padding:10px 17px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);font-size:.8rem;font-weight:700;text-decoration:none;box-shadow:0 8px 22px rgba(28,28,24,.04)}
+.service-area.primary{background:linear-gradient(135deg,var(--gold),var(--gold2));border-color:transparent;color:#fff}
+a.service-area:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(92,67,4,.16)}
+.area-note{display:block;margin-top:18px;color:var(--muted);font-size:.8rem}
 
 .trust{background:var(--bg);padding:55px 0}
 .trust-card{display:grid;grid-template-columns:auto 1fr auto;gap:26px;align-items:center;padding:30px 34px;background:#fff;border:1px solid rgba(209,197,180,.4);border-radius:18px;box-shadow:0 10px 28px rgba(28,28,24,.06)}
@@ -204,12 +219,13 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
 @media (max-width:1050px){
   .accessory-grid{grid-template-columns:repeat(2,1fr)}
 }
-@media (max-width:900px){
+@media (max-width:1050px){
   .nav-links{display:none}.menu-btn{display:block}
   .usp-grid,.steps{grid-template-columns:repeat(2,1fr)}
   .package-grid,.occasion-grid{grid-template-columns:1fr}
   .package.featured{transform:none}
   .split{grid-template-columns:1fr;gap:35px}
+  .eventmodule-teaser{grid-template-columns:1fr}
   .experience-media{max-width:720px;margin:auto;width:100%}
   .review-box{flex-direction:column;align-items:flex-start}
   .footer-grid{grid-template-columns:1fr 1fr}
@@ -240,8 +256,10 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
   "url":"https://www.fotoboxverleih-rosskopf.de/",
   "telephone":"+4915228494252",
   "priceRange":"€€",
-  "address":{"@type":"PostalAddress","streetAddress":"Altdorf","addressLocality":"Titting","postalCode":"85135","addressRegion":"Bayern","addressCountry":"DE"},
-  "areaServed":["Titting","Eichstätt","Beilngries","Greding","Kinding","Kipfenberg","Denkendorf","Berching","Dietfurt an der Altmühl"]
+  "email":"info@fotoboxverleih-rosskopf.de",
+  "address":{"@type":"PostalAddress","streetAddress":"Dr.-Kurz-Platz 5","addressLocality":"Titting","postalCode":"85135","addressRegion":"Bayern","addressCountry":"DE"},
+  "areaServed":["Eichstätt","Beilngries","Greding","Titting","Kinding","Kipfenberg","Denkendorf"],
+  "sameAs":["https://www.instagram.com/paparossi_photobooth/"]
 }
 </script>
 
@@ -268,6 +286,20 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
 @media(max-width:720px){.brand-name{display:block;font-size:.7rem;letter-spacing:.07em}}
 @media(max-width:620px){.accessory img{height:175px}}
 </style>
+<style>
+@media (min-width:1051px){.hero h1{font-size:clamp(2.7rem,5vw,4.4rem);line-height:1.08}}
+.eventmodule-visual img{width:100%;max-width:220px;margin:auto}
+</style>
+<style>
+@media (min-width:1051px){
+  .nav-inner,.nav-in{height:80px!important}
+  .nav-links{align-items:center;gap:clamp(12px,1.55vw,26px)!important}
+  .nav-links a{font-family:Inter,Arial,sans-serif!important;font-size:.72rem!important;font-weight:700!important;letter-spacing:.07em!important}
+  .brand-name,.nav a.brand{font-family:Jakarta,"Plus Jakarta Sans",Arial,sans-serif!important;font-size:.86rem!important;font-weight:800!important;line-height:1!important;letter-spacing:.1em!important}
+  .hero h1{font-family:Jakarta,"Plus Jakarta Sans",Arial,sans-serif!important;font-size:clamp(2.7rem,5vw,4.4rem)!important;font-weight:800!important;line-height:1.08!important;letter-spacing:-.04em!important;margin-top:14px!important;margin-bottom:18px!important}
+}
+</style>
+<style>@media (min-width:1051px){.nav-links a{white-space:nowrap}}</style>
 </head>
 
 <body>
@@ -280,7 +312,8 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
       <a class="active" href="index.html">Startseite</a>
       <a href="leistungen.html">Fotobox</a>
       <a href="audio-gaestebuch-mieten.html">Audio-Gästebuch</a>
-      <a href="fotobox-extras.html">Extras</a>
+      <a href="fotobox-extras.html">Fotobox-Zubehör</a>
+      <a href="eventmodule-mieten.html">Slushy &amp; Candy Bar</a>
       <a href="persoenliches.html">Persönliches</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
@@ -293,7 +326,8 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
     <a href="index.html">Startseite</a>
     <a href="leistungen.html">Fotobox</a>
     <a href="audio-gaestebuch-mieten.html">Audio-Gästebuch</a>
-    <a href="fotobox-extras.html">Fotobox-Extras</a>
+    <a href="fotobox-extras.html">Fotobox-Zubehör</a>
+    <a href="eventmodule-mieten.html">Slushy &amp; Candy Bar</a>
     <a href="persoenliches.html">Persönliches</a>
     <a href="kontakt.html">Kontakt</a>
     <a href="rechtliches.html">Impressum, Datenschutz & AGB</a>
@@ -307,7 +341,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
   <div class="container hero-content">
     <span class="eyebrow">Auf- und Abbau inklusive</span>
     <h1>Fotobox mieten in <em>Eichstätt, Beilngries</em> & Greding</h1>
-    <p>Fotobox für deine Feier: Auf- und Abbau sowie persönlicher Support sind in jedem Paket inklusive. Sofortdruck ist im Klassik- und Premium-Paket enthalten.</p>
+    <p>Fotobox für deine Feier: Auf- und Abbau sowie persönlicher Support sind in jedem Paket inklusive.</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="kontakt.html">Verfügbarkeit anfragen</a>
       <a class="btn btn-outline" href="#pakete">Pakete ansehen</a>
@@ -347,28 +381,28 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
       <h2>Fotobox mieten: Unsere Pakete im Überblick</h2>
       <p>Von der kleinen Feier bis zum großen Event – finde das Paket, das zu deinem Anlass passt.</p>
     </div>
-    <aside class="included-service" aria-label="Inklusivleistungen aller Fotobox-Pakete"><strong>Bei jedem Fotobox-Paket bereits inklusive</strong><div class="service-points"><span>Aufbau & Einrichtung</span><span>Abbau nach dem Event</span><span>Persönlicher Support</span></div></aside>
+    <aside class="included-service" aria-label="Inklusivleistungen aller Fotobox-Pakete"><strong>Bei jedem Fotobox-Paket bereits inklusive</strong><div class="service-points"><span>Aufbau & Einrichtung</span><span>Abbau nach dem Event</span><span>Telefonischer Support</span><span>Lustige / selbst gelaserte Holzrequisiten</span></div></aside>
     <div class="package-grid">
       <article class="package">
         <h3>Einsteiger (Digital)</h3>
         <p class="muted">Dein digitales Party-Upgrade – unbegrenzt Fotos, maximaler Spaß.</p>
         <div class="price">179 €</div>
         <ul><li>Digitale Fotoflatrate</li><li>Online-Galerie</li><li>Aufbau, Einrichtung & Abbau inklusive</li><li>Persönlicher Support inklusive</li></ul>
-        <a class="btn btn-outline" href="leistungen.html#einsteiger">Weitere Informationen</a>
+        <a class="btn btn-outline" href="leistungen.html#einsteiger">Einsteiger-Paket ansehen</a>
       </article>
       <article class="package featured">
         <h3>Klassik mit Sofortdruck</h3>
         <p class="muted">Das volle Erlebnis – schießen, drucken und sofort mitnehmen.</p>
         <div class="price">299 €</div>
         <ul><li>Alle Einsteiger-Leistungen</li><li>Fotodrucker inkl. 350 Bilder (10 × 15 cm)</li><li>Jeder weitere Ausdruck: 0,20 €</li><li>Individuelles Drucklayout</li></ul>
-        <a class="btn" href="leistungen.html#klassik">Weitere Informationen</a>
+        <a class="btn" href="leistungen.html#klassik">Klassik-Paket mit Sofortdruck ansehen</a>
       </article>
       <article class="package">
         <h3>Premium-Komplettpaket</h3>
         <p class="muted">Sorglos-Premium – das volle Programm inklusive Zubehör & Audio-Gästebuch.</p>
         <div class="price">449 €</div>
-        <ul><li>Alle Klassik-Leistungen</li><li>Druckflatrate ohne Limit</li><li>Audio-Gästebuch (Retro-Telefon)</li><li>Hintergrundsystem</li><li>Fotoaufgaben</li><li>Premium Service</li></ul>
-        <a class="btn btn-outline" href="leistungen.html#premium">Weitere Informationen</a>
+        <ul><li>Alle Klassik-Leistungen</li><li>Druckflatrate ohne Limit</li><li>Audio-Gästebuch (Retro-Telefon)</li><li>Hintergrundsystem</li><li>Fotoaufgaben</li><li>Vor-Ort-Hilfe bei technischen Problemen</li></ul>
+        <a class="btn btn-outline" href="leistungen.html#premium">Premium-Komplettpaket ansehen</a>
       </article>
     </div>
     <div class="delivery">
@@ -393,8 +427,8 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
       </div>
     </div>
     <div class="experience-media">
-      <img class="setup-shot" src="fotobox-komplettsetup-sofortdruck.webp" alt="Komplettes Fotobox-Setup mit Studioblitz, Profi-Fotodrucker, Requisiten und individuellem Sofortdruck" width="1536" height="1022" loading="lazy">
-      <img class="print-shot" src="fotobox-ausdrucke-erinnerungen-anonymisiert.webp" alt="Individuelle Fotobox-Ausdrucke als bleibende Erinnerung an eine Hochzeit" width="1200" height="900" loading="lazy">
+      <img class="setup-shot" src="fotobox-komplettsetup-sofortdruck.webp" alt="Komplettes Fotobox-Setup mit Studioblitz, Profi-Fotodrucker, Requisiten und individuellem Sofortdruck" loading="lazy" width="1536" height="1022">
+      <img class="print-shot" src="fotobox-ausdrucke-erinnerungen-anonymisiert.webp" alt="Individuelle Fotobox-Ausdrucke als bleibende Erinnerung an eine Hochzeit" loading="lazy" width="1200" height="900">
     </div>
   </div>
 </section>
@@ -418,7 +452,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
       </article>
 
       <article class="accessory">
-        <img src="fotohintergrund-kulisse.webp" alt="Fotobox mit weißem Hintergrund, Lichterketten und Pampasgras" width="1400" height="788" loading="lazy">
+        <img src="fotohintergrund-kulisse.webp" alt="Fotobox mit weißem Hintergrund, Lichterketten und Pampasgras" loading="lazy" width="1400" height="788">
         <div class="accessory-body">
           <h3>Hintergründe & Hexagon</h3>
           <p>Eine passende Kulisse schafft einen einheitlichen Look und macht die Fotofläche zum Blickfang.</p>
@@ -463,6 +497,20 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
       </article>
     </div>
 
+    <article class="eventmodule-teaser">
+      <div class="eventmodule-visuals">
+        <div class="eventmodule-visual"><img src="candybar-freigestellt-v39.webp" alt="Freigestellte vierstufige Candy-Bar aus Holz mit NaschBAR-Schild, Bonbongläsern, Schalen, Blumendekoration und Lichterkette" loading="lazy" width="1444" height="1089"><span>Candy-Bar</span></div>
+        <div class="eventmodule-visual"><img src="slush-maschine-visualisierung-v38.webp" alt="Slush-Maschine mit rotem und blauem Getränk in zwei Behältern" loading="lazy" width="1448" height="1086"><span>Slush-Maschine</span></div>
+      </div>
+      <div>
+        <span class="eyebrow">Slushy & Candy Bar</span>
+        <h3>Candy Bar und Slush-Eismaschine</h3>
+        <div class="eventmodule-status"><span>Candy-Bar ab 45 €</span><span>Slush-Maschine mit 2 × 12 Litern</span></div>
+        <p>Ergänze deine Hochzeit, deinen Geburtstag oder dein Firmenevent um eine dekorative Candy-Bar oder eine Slush-Maschine mit zwei Geschmacksrichtungen. Die Slush-Maschine befindet sich derzeit in Planung und ist voraussichtlich ab 2027 buchbar.</p>
+        <a class="accessory-link" href="eventmodule-mieten.html">Slushy & Candy Bar ansehen →</a>
+      </div>
+    </article>
+
     <div class="accessory-note">
       <p><strong>Schon eine Idee für deine Feier?</strong> Ich berate dich gerne, welche Kombination aus Fotobox und Zubehör zu deinem Event, deiner Location und deinem Budget passt.</p>
     </div>
@@ -473,15 +521,10 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
   <div class="container split">
     <div><img src="unsere-fotoboxen.webp" alt="Fotoboxen mit professioneller Beleuchtung" loading="lazy"></div>
     <div class="copy">
-      <span class="eyebrow">Ausstattung</span>
-      <h2>Alles dabei, damit deine Gäste einfach loslegen können.</h2>
-      <div class="feature-list">
-        <div><h3>Professionelle Fototechnik</h3><p>Hochwertige Kamera und Beleuchtung für schöne Aufnahmen bei unterschiedlichsten Lichtbedingungen.</p></div>
-        <div><h3>Sofortdruck & Online-Galerie</h3><p>Je nach Paket kannst du Fotos direkt ausdrucken und zusätzlich digital über die Online-Galerie erhalten.</p></div>
-        <div><h3>Individuelles Drucklayout</h3><p>Das Druckdesign kann passend zu deinem Event gestaltet werden.</p></div>
-        <div><h3>Persönlich betreut</h3><p>Ich kümmere mich um die Vorbereitung und sorge dafür, dass die Technik für deinen Termin bereitsteht.</p></div>
-      </div>
-      <a class="btn btn-outline" href="leistungen.html">Infos zur Fotobox</a>
+      <span class="eyebrow">Meine Fotoboxen</span>
+      <h2>Drei Fotoboxen. Drei individuelle Designs.</h2>
+      <p class="lead">Unterschiedliche Designs, passend für Hochzeiten, Geburtstage und Firmenevents.</p>
+      <a class="btn btn-outline" href="leistungen.html">Fotobox-Pakete ansehen</a>
     </div>
   </div>
 </section>
@@ -504,7 +547,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
       </article>
       <article class="occasion">
         <img src="anlass-firmenfeier.webp" alt="Weiße Fotobox bei einer Firmenfeier und einem Teamevent" loading="lazy">
-        <div class="occasion-body"><h3>Firmenfeier & Event</h3><p>Für Sommerfeste, Weihnachtsfeiern, Jubiläen und Teamevents – mit Raum für kreative Erinnerungen.</p><a class="occasion-link" href="kontakt.html">Event anfragen →</a></div>
+        <div class="occasion-body"><h3>Firmenfeier & Event</h3><p>Für Sommerfeste, Weihnachtsfeiern, Jubiläen, Messen und Teamevents – auf Wunsch mit individuellem Fotolayout und Firmenbranding.</p><a class="occasion-link" href="fotobox-eichstaett.html#firmenevents">Fotobox für Firmenevents →</a></div>
       </article>
     </div>
   </div>
@@ -531,7 +574,17 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
   <div class="narrow">
     <span class="eyebrow">Regional für dich unterwegs</span>
     <h2>Fotobox rund um Eichstätt, Beilngries & Greding</h2>
-    <p>Von Titting aus liefere ich bevorzugt im Umkreis von rund 30 Kilometern. Dazu zählen insbesondere Eichstätt, Beilngries und Greding sowie Kinding, Kipfenberg, Denkendorf, Berching und Dietfurt an der Altmühl.</p>
+    <p>Von Titting aus liefere ich bevorzugt im Umkreis von rund 30 Kilometern. Im Fokus stehen Eichstätt, Beilngries und Greding; zum nahen Kerngebiet gehören außerdem Titting, Kinding, Kipfenberg und Denkendorf sowie die umliegenden kleineren Orte.</p>
+    <div class="service-areas" aria-label="Servicegebiet">
+      <a class="service-area primary" href="fotobox-eichstaett.html">Fotobox Eichstätt</a>
+      <span class="service-area">Beilngries</span>
+      <span class="service-area">Greding</span>
+      <span class="service-area">Titting</span>
+      <span class="service-area">Kinding</span>
+      <span class="service-area">Kipfenberg</span>
+      <span class="service-area">Denkendorf</span>
+    </div>
+    <small class="area-note">Eichstätt im Detail ansehen · weitere umliegende Orte nach Absprache</small>
   </div>
 </section>
 
@@ -589,7 +642,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
 <footer class="footer">
   <div class="container">
     <div class="footer-cta">
-      <img class="footer-cta-logo" src="paparossi-logo-transparent.png" alt="Logo Fotoboxverleih Roßkopf" width="723" height="750" loading="lazy">
+      <img class="footer-cta-logo" src="paparossi-logo-transparent.png" alt="Logo Fotoboxverleih Roßkopf" loading="lazy" width="723" height="750">
       <h2 style="color:var(--gold);font-style:italic">Bereit für besondere Erinnerungen?</h2>
       <p class="muted">Frag jetzt unverbindlich an und finde heraus, ob deine Fotobox an deinem Wunschtermin verfügbar ist.</p>
       <a class="btn btn-primary" href="kontakt.html">Verfügbarkeit anfragen</a>
@@ -614,7 +667,8 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
         <a href="index.html">Startseite</a>
         <a href="leistungen.html">Fotobox</a>
         <a href="audio-gaestebuch-mieten.html">Audio-Gästebuch</a>
-        <a href="fotobox-extras.html">Fotobox-Extras</a>
+        <a href="fotobox-extras.html">Fotobox-Zubehör</a>
+        <a href="eventmodule-mieten.html">Slushy &amp; Candy Bar</a>
         <a href="persoenliches.html">Persönliches</a>
         <a href="kontakt.html">Kontakt</a>
         <a href="rechtliches.html">Impressum, Datenschutz & AGB</a>
